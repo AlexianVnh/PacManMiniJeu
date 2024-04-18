@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2 JS</title>
+</head>
+<body>
+    <div id="firstDiv"></div>
+    <div id="sndDiv"></div>
+
+    
+    <style>
+        body {
+            height: 100vh;
+        }
+        #firstDiv{
+            position : absolute;
+            left : 200px;
+            top : 200px;
+            width : 300px;
+            height : 300px;
+            border : 3px solid black;
+        }
+        #sndDiv{
+            position : absolute;
+            left : 500px;
+            top : 200px;
+            width : 300px;
+            height : 300px;
+            border : 3px solid red;
+        }
+    </style>
+
+
+    <script>
+        let b = document.querySelector("body")
+        
+        function callback(event) {
+            console.log(event)
+        }
+
+        b.addEventListener("click", callback)
+        
+        let firstDiv = document.querySelector("#firstDiv")
+        let sndDiv = document.querySelector("#sndDiv")
+        
+        sndDiv.addEventListener("click", () => {
+            sndDiv.style.backgroundColor = "blue"
+        })
+    </script>
+</body>
+</html>
